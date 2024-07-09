@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Team Flash</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<script>
+window.alert('Welcome to Team Flash!');
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        body {
+            background-color: #333; 
+            color: white;
+						text-align: center;
+
+        }
+        label, input, button, p {
+            color: green;
+			text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Your Player</h1>
+    <form id="feedbackForm">
+        <label for="player">Who is the best player? (ADC, XB, Elly, Hung)</label>
+        <input type="text" id="player" name="player" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const player = document.getElementById('player').value.trim();
+            const result = document.getElementById('result');
+            const validPlayers = ['ADC', 'XB', 'Elly', 'Hung'];
+            if (player === 'Hung') {
+                result.textContent = `You are right! Hung is the GOAT.`;
+            } else if (validPlayers.includes(player)) {
+                result.textContent = `You are wrong! ${player} is not the best player.`;
+            } else {
+                result.textContent = 'Please enter a valid player name: ADC, XB, Elly, or Hung.';
+				}
+        });
+    </script>
+</body>
+	<div id="header">
+		<ul id="navigation">
+			<li class="first selected"><a href="index.html" id="link1">Home</a></li>
+			<li><a href="portfolio.html" id="link2">Portfolio</a></li>
+			<li><a href="about.html" id="link3">About</a></li>
+			<li><a href="rates.html" id="link4">Rates</a></li>
+			<li><a href="news.html" id="link5">News</a></li>
+			<li><a href="blog.html" id="link6">Blogs</a></li>
+			<li><a href="contact.html" id="link7">Contact Us</a></li>
+		</ul>
+		<a href="index.html" id="logo"><img src="images/logoflash.jpg" alt=""/></a>
+	</div>
+	<div id="content">
+		<div id="featured">
+			<h2><a href="portfolio.html">Latest Work</a></h2>
+			<ul id="section1">
+				<li><a href="portfolio.html"><img src="images/aov.png" alt=""/></a></li>
+			</ul>
+			<a href="portfolio.html" id="figure"><img src="images/flashmain.jpg" alt=""/></a>
+			<ul id="section2">
+				<li class="first"><a href="portfolio.html"><img src="images/dtdvwin.jpg" alt=""/></a></li>
+				<li><a href="portfolio.html"><img src="images/awcwin.jpg" alt=""/></a></li>
+				<li><a href="portfolio.html"><img src="images/aicwin.jpg" alt=""/></a></li>
+			</ul>
+		</div>
+		<div id="sidebar">
+			<div id="news">
+				<h3><a href="news.html">News</a></h3>
+				<div class="first">
+					<p>New players recruited</p>
+				</div>
+				<div>
+					<p>Seeking for young talents</p>
+				</div>
+				<div>
+					<p>"In Esports, it means NOTHING if you are not CHAMPIONS - and we are LEGENDS."</p>
+				</div>
+				<a href="news.html">more</a>
+			</div>
+			<div id="blogs">
+				<h3><a href="blog.html">Blogs</a></h3>
+				<div class="first">
+					<p>Story of a "from-zero" legend</p>
+				</div>
+				<div>
+					<p>Becoming a professional E-sports player</p>
+				</div>
+				<div>
+				</div>
+				<a href="blog.html">more</a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<div class="first">
+				<h4><a href="about.html">About</a></h4>
+				<a href="about.html"><img src="images/teamflash.jpg" alt=""/></a>
+				<span>Gau, XB, Elly, ADC, Datkoii, Harvin, ProE</span>
+			</div>
+			<div>
+				<h4>Testimonials</h4>
+				<p>#1 AoV International Cup 2019</p>
+				<p>#1 AoV World Cup 2019</p>
+				<p>#1 AoV Vietnam National Cup 2018, 2019, 2020, 2021</p>
+			</div>
+			<div id="contact">
+				<h4>Contact</h4>
+
+				<a href="mailto:hungblayer@gmail.com" id="email">hungblayer@gmail.com</a>
+				<a href="#" id="phone">09786554351</a>
+				<a href="https://www.tiu.ac.jp" id="address">Tokyo International University</a>
+				<a href="https://www.facebook.com/hung.blayer/" id="facebook">Facebook</a>
+			</div>
+			<p>NGUYEN THE HUNG 23229586</p>
+		</div>
+	</div>
+</body>
+</html>
